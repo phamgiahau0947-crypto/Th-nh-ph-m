@@ -1,0 +1,109 @@
+symbol,part,regime,task,model,n,macro_f1,mcc,balanced_acc,pr_auc,roc_auc,base_rate,brier
+BTCUSDT,walk-forward (val),low,direction,LogReg-OvR,143732,0.491,0.3023,0.4647,,,,
+BTCUSDT,walk-forward (val),low,direction,MNLogit,143732,0.4822,0.2974,0.4578,,,,
+BTCUSDT,walk-forward (val),low,direction,RandomForest,143732,0.5516,0.3449,0.5215,,,,
+BTCUSDT,walk-forward (val),low,direction,XGBoost,143732,0.5638,0.3571,0.5367,,,,
+BTCUSDT,walk-forward (val),low,direction,CST,143732,0.2552,0.1668,0.5014,,,,
+BTCUSDT,walk-forward (val),low,direction,Majority,143732,0.1004,-0.0402,0.3296,,,,
+BTCUSDT,walk-forward (val),low,stress,LogReg,141078,,,,0.1754,0.7924,0.0493,0.044
+BTCUSDT,walk-forward (val),low,stress,RandomForest,141078,,,,0.2013,0.8136,0.0493,0.0427
+BTCUSDT,walk-forward (val),low,stress,XGBoost,141078,,,,0.1698,0.7711,0.0493,0.0447
+BTCUSDT,walk-forward (val),mid,direction,LogReg-OvR,143721,0.5097,0.2724,0.5131,,,,
+BTCUSDT,walk-forward (val),mid,direction,MNLogit,143721,0.5117,0.2734,0.5142,,,,
+BTCUSDT,walk-forward (val),mid,direction,RandomForest,143721,0.513,0.2771,0.5144,,,,
+BTCUSDT,walk-forward (val),mid,direction,XGBoost,143721,0.5097,0.2732,0.5115,,,,
+BTCUSDT,walk-forward (val),mid,direction,CST,143721,0.387,0.1522,0.4214,,,,
+BTCUSDT,walk-forward (val),mid,direction,Majority,143721,0.2184,-0.05,0.3084,,,,
+BTCUSDT,walk-forward (val),mid,stress,LogReg,140672,,,,0.1263,0.6989,0.0534,0.0499
+BTCUSDT,walk-forward (val),mid,stress,RandomForest,140672,,,,0.1265,0.7082,0.0534,0.0488
+BTCUSDT,walk-forward (val),mid,stress,XGBoost,140672,,,,0.1092,0.6758,0.0534,0.0498
+BTCUSDT,walk-forward (val),high,direction,LogReg-OvR,144487,0.454,0.2036,0.4487,,,,
+BTCUSDT,walk-forward (val),high,direction,MNLogit,144487,0.4431,0.1989,0.4404,,,,
+BTCUSDT,walk-forward (val),high,direction,RandomForest,144487,0.4133,0.1914,0.4241,,,,
+BTCUSDT,walk-forward (val),high,direction,XGBoost,144487,0.4162,0.1874,0.4241,,,,
+BTCUSDT,walk-forward (val),high,direction,CST,144487,0.3771,0.1119,0.3802,,,,
+BTCUSDT,walk-forward (val),high,direction,Majority,144487,0.2204,-0.0269,0.3085,,,,
+BTCUSDT,walk-forward (val),high,stress,LogReg,141150,,,,0.1053,0.6549,0.0596,0.056
+BTCUSDT,walk-forward (val),high,stress,RandomForest,141150,,,,0.1114,0.6642,0.0596,0.0549
+BTCUSDT,walk-forward (val),high,stress,XGBoost,141150,,,,0.1018,0.6316,0.0596,0.0558
+BTCUSDT,test,low,direction,LogReg-OvR,50951,0.5124,0.29,0.5021,,,,
+BTCUSDT,test,low,direction,MNLogit,50951,0.5038,0.2848,0.4949,,,,
+BTCUSDT,test,low,direction,RandomForest,50951,0.5095,0.2889,0.4991,,,,
+BTCUSDT,test,low,direction,XGBoost,50951,0.5394,0.3031,0.5281,,,,
+BTCUSDT,test,low,direction,CST,50951,0.3832,0.2548,0.5198,,,,
+BTCUSDT,test,low,direction,Majority,50951,0.2151,0.0,0.3333,,,,
+BTCUSDT,test,low,stress,LogReg,49688,,,,0.2142,0.7793,0.0514,0.0441
+BTCUSDT,test,low,stress,RandomForest,49688,,,,0.2344,0.7876,0.0514,0.0474
+BTCUSDT,test,low,stress,XGBoost,49688,,,,0.2318,0.7875,0.0514,0.0519
+BTCUSDT,test,mid,direction,LogReg-OvR,74872,0.5126,0.2733,0.5125,,,,
+BTCUSDT,test,mid,direction,MNLogit,74872,0.5141,0.2762,0.514,,,,
+BTCUSDT,test,mid,direction,RandomForest,74872,0.5098,0.2787,0.5125,,,,
+BTCUSDT,test,mid,direction,XGBoost,74872,0.5062,0.2805,0.5116,,,,
+BTCUSDT,test,mid,direction,CST,74872,0.4174,0.251,0.4744,,,,
+BTCUSDT,test,mid,direction,Majority,74872,0.1499,0.0,0.3333,,,,
+BTCUSDT,test,mid,stress,LogReg,72819,,,,0.1401,0.7232,0.0498,0.046
+BTCUSDT,test,mid,stress,RandomForest,72819,,,,0.1419,0.7219,0.0498,0.0496
+BTCUSDT,test,mid,stress,XGBoost,72819,,,,0.1437,0.7119,0.0498,0.0584
+BTCUSDT,test,high,direction,LogReg-OvR,46953,0.4476,0.216,0.444,,,,
+BTCUSDT,test,high,direction,MNLogit,46953,0.4316,0.2106,0.4342,,,,
+BTCUSDT,test,high,direction,RandomForest,46953,0.427,0.2076,0.4313,,,,
+BTCUSDT,test,high,direction,XGBoost,46953,0.4294,0.2078,0.4326,,,,
+BTCUSDT,test,high,direction,CST,46953,0.4099,0.1969,0.4186,,,,
+BTCUSDT,test,high,direction,Majority,46953,0.0657,0.0,0.3333,,,,
+BTCUSDT,test,high,stress,LogReg,46653,,,,0.1237,0.6874,0.0558,0.0537
+BTCUSDT,test,high,stress,RandomForest,46653,,,,0.1204,0.6742,0.0558,0.0558
+BTCUSDT,test,high,stress,XGBoost,46653,,,,0.1162,0.6551,0.0558,0.067
+ETHUSDT,walk-forward (val),low,direction,LogReg-OvR,143705,0.3907,0.1805,0.3971,,,,
+ETHUSDT,walk-forward (val),low,direction,MNLogit,143705,0.3895,0.1805,0.3965,,,,
+ETHUSDT,walk-forward (val),low,direction,RandomForest,143705,0.4552,0.2249,0.4405,,,,
+ETHUSDT,walk-forward (val),low,direction,XGBoost,143705,0.4754,0.2356,0.4583,,,,
+ETHUSDT,walk-forward (val),low,direction,CST,143705,0.2456,0.1446,0.4697,,,,
+ETHUSDT,walk-forward (val),low,direction,Majority,143705,0.1032,0.0,0.3333,,,,
+ETHUSDT,walk-forward (val),low,stress,LogReg,141142,,,,0.1909,0.7565,0.0538,0.0484
+ETHUSDT,walk-forward (val),low,stress,RandomForest,141142,,,,0.2098,0.7501,0.0538,0.0469
+ETHUSDT,walk-forward (val),low,stress,XGBoost,141142,,,,0.1894,0.7264,0.0538,0.0484
+ETHUSDT,walk-forward (val),mid,direction,LogReg-OvR,143717,0.446,0.1804,0.4506,,,,
+ETHUSDT,walk-forward (val),mid,direction,MNLogit,143717,0.4522,0.1843,0.4544,,,,
+ETHUSDT,walk-forward (val),mid,direction,RandomForest,143717,0.4648,0.2071,0.4688,,,,
+ETHUSDT,walk-forward (val),mid,direction,XGBoost,143717,0.462,0.1994,0.4644,,,,
+ETHUSDT,walk-forward (val),mid,direction,CST,143717,0.3343,0.1497,0.4146,,,,
+ETHUSDT,walk-forward (val),mid,direction,Majority,143717,0.1704,0.0,0.3333,,,,
+ETHUSDT,walk-forward (val),mid,stress,LogReg,140014,,,,0.1096,0.6755,0.052,0.0483
+ETHUSDT,walk-forward (val),mid,stress,RandomForest,140014,,,,0.1106,0.6753,0.052,0.048
+ETHUSDT,walk-forward (val),mid,stress,XGBoost,140014,,,,0.0934,0.642,0.052,0.0488
+ETHUSDT,walk-forward (val),high,direction,LogReg-OvR,144491,0.4165,0.1512,0.4189,,,,
+ETHUSDT,walk-forward (val),high,direction,MNLogit,144491,0.4053,0.1481,0.4131,,,,
+ETHUSDT,walk-forward (val),high,direction,RandomForest,144491,0.3814,0.1472,0.4055,,,,
+ETHUSDT,walk-forward (val),high,direction,XGBoost,144491,0.384,0.1405,0.4036,,,,
+ETHUSDT,walk-forward (val),high,direction,CST,144491,0.3355,0.1103,0.3805,,,,
+ETHUSDT,walk-forward (val),high,direction,Majority,144491,0.1954,0.0,0.3333,,,,
+ETHUSDT,walk-forward (val),high,stress,LogReg,141640,,,,0.0862,0.616,0.0554,0.0524
+ETHUSDT,walk-forward (val),high,stress,RandomForest,141640,,,,0.0929,0.6329,0.0554,0.0517
+ETHUSDT,walk-forward (val),high,stress,XGBoost,141640,,,,0.0886,0.6065,0.0554,0.0521
+ETHUSDT,test,low,direction,LogReg-OvR,46412,0.3928,0.172,0.4134,,,,
+ETHUSDT,test,low,direction,MNLogit,46412,0.3827,0.168,0.4081,,,,
+ETHUSDT,test,low,direction,RandomForest,46412,0.4175,0.1892,0.4284,,,,
+ETHUSDT,test,low,direction,XGBoost,46412,0.4393,0.199,0.4419,,,,
+ETHUSDT,test,low,direction,CST,46412,0.3039,0.1582,0.4416,,,,
+ETHUSDT,test,low,direction,Majority,46412,0.1435,0.0,0.3333,,,,
+ETHUSDT,test,low,stress,LogReg,45112,,,,0.1767,0.7336,0.0483,0.0438
+ETHUSDT,test,low,stress,RandomForest,45112,,,,0.191,0.7403,0.0483,0.0463
+ETHUSDT,test,low,stress,XGBoost,45112,,,,0.1862,0.7345,0.0483,0.0472
+ETHUSDT,test,mid,direction,LogReg-OvR,72283,0.4389,0.1788,0.4469,,,,
+ETHUSDT,test,mid,direction,MNLogit,72283,0.4446,0.1826,0.4507,,,,
+ETHUSDT,test,mid,direction,RandomForest,72283,0.4674,0.2037,0.4686,,,,
+ETHUSDT,test,mid,direction,XGBoost,72283,0.4673,0.204,0.4688,,,,
+ETHUSDT,test,mid,direction,CST,72283,0.3328,0.15,0.417,,,,
+ETHUSDT,test,mid,direction,Majority,72283,0.1681,0.0,0.3333,,,,
+ETHUSDT,test,mid,stress,LogReg,70267,,,,0.126,0.6987,0.0511,0.0492
+ETHUSDT,test,mid,stress,RandomForest,70267,,,,0.1342,0.7039,0.0511,0.049
+ETHUSDT,test,mid,stress,XGBoost,70267,,,,0.1346,0.6981,0.0511,0.0508
+ETHUSDT,test,high,direction,LogReg-OvR,54082,0.432,0.1623,0.43,,,,
+ETHUSDT,test,high,direction,MNLogit,54082,0.4226,0.159,0.4231,,,,
+ETHUSDT,test,high,direction,RandomForest,54082,0.401,0.1521,0.4112,,,,
+ETHUSDT,test,high,direction,XGBoost,54082,0.39,0.1433,0.4047,,,,
+ETHUSDT,test,high,direction,CST,54082,0.3477,0.1189,0.3839,,,,
+ETHUSDT,test,high,direction,Majority,54082,0.1975,0.0,0.3333,,,,
+ETHUSDT,test,high,stress,LogReg,53782,,,,0.1056,0.6495,0.0587,0.0596
+ETHUSDT,test,high,stress,RandomForest,53782,,,,0.1088,0.6628,0.0587,0.0562
+ETHUSDT,test,high,stress,XGBoost,53782,,,,0.1161,0.6532,0.0587,0.0566

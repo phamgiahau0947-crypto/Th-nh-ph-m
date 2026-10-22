@@ -1,0 +1,23 @@
+# Môi trường Python & cache (mỗi máy tự tạo bằng 1_CAI_DAT.bat)
+.venv/
+.cache/
+__pycache__/
+*.pyc
+
+# Dữ liệu trung gian – tự tạo lại được, quá nặng cho GitHub
+data/processed/task2_features/
+data/processed/task2_preds/
+data/processed/task3_zoo/
+data/processed/*_view.csv
+data/processed/*_log.txt
+data/raw/*/trades_1s/
+data/raw/*/trades_tick/
+data/raw/*/_tmp/
+
+# Ghi chú cá nhân & công cụ đóng gói (không thuộc bài nộp)
+CLAUDE.md
+VIEC_CON_LAI.md
+DONG_GOI_THANH_PHAM.bat
+dong_goi_thanh_pham.py
+Thành phẩm/
+tài liệu/

@@ -1,0 +1,15 @@
+symbol,target,split,model,n,base_rate,pr_auc,roc_auc,brier,brier_skill,r2_log,mae_bps,spearman,mean_y_bps
+BTCUSDT,widen,test,Tần suất nền,172776,0.005,0.005,0.5,0.005,-0.0092,,,,
+BTCUSDT,widen,test,Persistence,172776,0.005,0.0053,0.5068,0.005,-0.0101,,,,
+BTCUSDT,widen,test,LogReg,172776,0.005,0.0161,0.6504,0.005,0.001,,,,
+BTCUSDT,widen,test,XGBoost,172776,0.005,0.0148,0.649,0.005,-0.0035,,,,
+BTCUSDT,eff,test,Persistence,172758,,,,,,-0.2954,0.0479,0.3888,0.0476
+BTCUSDT,eff,test,Ridge,172776,,,,,,0.0238,0.05,0.437,0.0476
+BTCUSDT,eff,test,XGBoost,172776,,,,,,0.1294,0.0462,0.4708,0.0476
+ETHUSDT,widen,test,Tần suất nền,172777,0.0026,0.0026,0.5,0.0026,-0.0157,,,,
+ETHUSDT,widen,test,Persistence,172777,0.0026,0.0031,0.5112,0.0026,-0.0175,,,,
+ETHUSDT,widen,test,LogReg,172777,0.0026,0.0096,0.6551,0.0025,-0.0014,,,,
+ETHUSDT,widen,test,XGBoost,172777,0.0026,0.0102,0.7028,0.0026,-0.0059,,,,
+ETHUSDT,eff,test,Persistence,172759,,,,,,-0.3827,0.0917,0.3232,0.1284
+ETHUSDT,eff,test,Ridge,172777,,,,,,0.0972,0.0825,0.3895,0.1284
+ETHUSDT,eff,test,XGBoost,172777,,,,,,0.0747,0.0868,0.4183,0.1284

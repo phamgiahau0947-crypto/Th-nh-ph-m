@@ -1,0 +1,47 @@
+symbol,task,model,metric,value,ci_lo,ci_hi,p_le_0
+BTCUSDT,direction,LogReg-OvR,macro_f1,0.5422,0.5344,0.5475,
+BTCUSDT,direction,LogReg-OvR,mcc,0.3164,0.3044,0.3242,
+BTCUSDT,direction,MNLogit,macro_f1,0.5428,0.5349,0.5486,
+BTCUSDT,direction,MNLogit,mcc,0.3165,0.3051,0.3251,
+BTCUSDT,direction,RandomForest,macro_f1,0.5443,0.5363,0.5501,
+BTCUSDT,direction,RandomForest,mcc,0.317,0.305,0.3256,
+BTCUSDT,direction,XGBoost,macro_f1,0.5442,0.5356,0.5502,
+BTCUSDT,direction,XGBoost,mcc,0.3171,0.3053,0.3258,
+BTCUSDT,direction,Majority,macro_f1,0.1522,0.1459,0.1581,
+BTCUSDT,direction,Majority,mcc,0.0,0.0,0.0,
+BTCUSDT,direction,OBI-rule,macro_f1,0.4673,0.4602,0.473,
+BTCUSDT,direction,OBI-rule,mcc,0.2302,0.2198,0.2388,
+BTCUSDT,direction,CST,macro_f1,0.4071,0.4025,0.4115,
+BTCUSDT,direction,CST,mcc,0.233,0.2232,0.2409,
+BTCUSDT,direction,XGBoost − MNLogit,Δmacro_f1,0.0014,-0.0018,0.0043,0.215
+BTCUSDT,direction,XGBoost − RandomForest,Δmacro_f1,-0.0002,-0.0027,0.0028,0.585
+BTCUSDT,direction,MNLogit − OBI-rule,Δmacro_f1,0.0755,0.0682,0.0823,0.0
+BTCUSDT,direction,XGBoost − CST,Δmacro_f1,0.1371,0.1297,0.1447,0.0
+BTCUSDT,stress,LogReg,pr_auc,0.1526,0.1339,0.1715,
+BTCUSDT,stress,RandomForest,pr_auc,0.1672,0.1464,0.1916,
+BTCUSDT,stress,XGBoost,pr_auc,0.1639,0.1433,0.19,
+BTCUSDT,stress,Persistence,pr_auc,0.0938,0.0819,0.1074,
+BTCUSDT,stress,AS-rule,pr_auc,0.0842,0.0757,0.0935,
+ETHUSDT,direction,LogReg-OvR,macro_f1,0.4731,0.4663,0.4818,
+ETHUSDT,direction,LogReg-OvR,mcc,0.2295,0.2192,0.2411,
+ETHUSDT,direction,MNLogit,macro_f1,0.4761,0.469,0.4844,
+ETHUSDT,direction,MNLogit,mcc,0.2314,0.2208,0.2424,
+ETHUSDT,direction,RandomForest,macro_f1,0.492,0.485,0.4988,
+ETHUSDT,direction,RandomForest,mcc,0.2392,0.2283,0.2493,
+ETHUSDT,direction,XGBoost,macro_f1,0.492,0.4852,0.4986,
+ETHUSDT,direction,XGBoost,mcc,0.2379,0.2278,0.2477,
+ETHUSDT,direction,Majority,macro_f1,0.1716,0.1683,0.1749,
+ETHUSDT,direction,Majority,mcc,0.0,0.0,0.0,
+ETHUSDT,direction,OBI-rule,macro_f1,0.4357,0.4299,0.4406,
+ETHUSDT,direction,OBI-rule,mcc,0.161,0.1529,0.1679,
+ETHUSDT,direction,CST,macro_f1,0.3308,0.3266,0.3341,
+ETHUSDT,direction,CST,mcc,0.1402,0.1319,0.1475,
+ETHUSDT,direction,XGBoost − MNLogit,Δmacro_f1,0.0159,0.0117,0.0207,0.0
+ETHUSDT,direction,XGBoost − RandomForest,Δmacro_f1,0.0,-0.0025,0.0019,0.505
+ETHUSDT,direction,MNLogit − OBI-rule,Δmacro_f1,0.0404,0.0327,0.0488,0.0
+ETHUSDT,direction,XGBoost − CST,Δmacro_f1,0.1612,0.1524,0.1688,0.0
+ETHUSDT,stress,LogReg,pr_auc,0.1277,0.1122,0.1444,
+ETHUSDT,stress,RandomForest,pr_auc,0.1424,0.123,0.1662,
+ETHUSDT,stress,XGBoost,pr_auc,0.1423,0.1226,0.1623,
+ETHUSDT,stress,Persistence,pr_auc,0.0796,0.0687,0.0902,
+ETHUSDT,stress,AS-rule,pr_auc,0.0728,0.0653,0.0816,

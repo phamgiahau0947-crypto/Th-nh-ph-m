@@ -1,0 +1,7 @@
+# File .bat phải có xuống dòng kiểu Windows khi tải về từ GitHub
+*.bat text eol=crlf
+*.parquet binary
+*.pkl binary
+*.pt binary
+*.png binary
+*.docx binary

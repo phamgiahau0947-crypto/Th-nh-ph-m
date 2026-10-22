@@ -1,0 +1,62 @@
+{
+  "symbols": {
+    "BTCUSDT": {
+      "direction_model": "XGBoost",
+      "structural": {
+        "as": {
+          "k": 2.15835603598928,
+          "A": 0.16944452275069286,
+          "gamma": 0.1,
+          "horizon_s": 10,
+          "ratio_norm": 0.04054320871636504
+        },
+        "cst": {
+          "lam_vol": 0.12503447671397938,
+          "mu_vol": 0.10976546281003215,
+          "theta": 0.05499644138282136,
+          "unit": 0.03788480043411255,
+          "n_max": 150,
+          "t_max": 300.0,
+          "dt": 0.1,
+          "lam_units_per_s": 3.3003863101096025,
+          "mu_units_per_s": 2.897348317854572,
+          "fit_logloss": 0.6379874296646284
+        }
+      },
+      "delta_bps": 0.0,
+      "stress_model": "LogReg"
+    },
+    "ETHUSDT": {
+      "direction_model": "XGBoost",
+      "structural": {
+        "as": {
+          "k": 1.241219300339467,
+          "A": 0.24088857171179306,
+          "gamma": 0.1,
+          "horizon_s": 10,
+          "ratio_norm": 0.06104563413316197
+        },
+        "cst": {
+          "lam_vol": 1.5224200386016418,
+          "mu_vol": 2.357634158119035,
+          "theta": 0.06666230262152284,
+          "unit": 19.879599571228027,
+          "n_max": 150,
+          "t_max": 300.0,
+          "dt": 0.1,
+          "lam_units_per_s": 0.07658202737670118,
+          "mu_units_per_s": 0.11859565629939882,
+          "fit_logloss": 0.6548392852262213
+        }
+      },
+      "delta_bps": 0.334716260433197,
+      "stress_model": "LogReg"
+    }
+  },
+  "default_symbol": "BTCUSDT",
+  "horizon_s": 10,
+  "stress_ratio_warning": 1.5,
+  "stress_warning_threshold": 0.3,
+  "created_utc": "2026-10-20T12:57:22.153630+00:00",
+  "stress_caution_threshold": 0.15
+}

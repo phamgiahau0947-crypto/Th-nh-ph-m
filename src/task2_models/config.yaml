@@ -1,0 +1,69 @@
+# =====================================================================
+# CẤU HÌNH TASK 2 – TOÁN HỌC VI CẤU TRÚC, ML, STRESS & LỢI SUẤT
+# Dữ liệu đầu vào: kho nền Task 1 (data/raw/raw_lob_trades.parquet), lưới 1 giây/dòng.
+# =====================================================================
+
+symbols: [BTCUSDT, ETHUSDT]
+# Ngày dùng để nghiên cứu: [seed] = 12 ngày Tardis cố định (số liệu báo cáo không đổi khi có ngày tự thu live).
+# Thêm "rolling" để đưa các ngày tự thu bằng WebSocket (Task 1) vào train/test.
+data_kinds: [seed]
+levels: 20                  # Số tầng sổ lệnh có trong dữ liệu
+mlofi_levels: 10            # M trong MLOFI (Xu, Gould & Howison 2019 dùng M = 10)
+
+# ---- Thiết kế mục tiêu dự báo ----------------------------------------
+horizon_s: 10               # h: chân trời dự báo (giây). Đề bài 2.5: 1/5/10s; đặc tả: 10s
+robust_horizons_s: [5, 30]  # Phân tích độ nhạy theo h
+delta_flat_share: 0.3333    # δ chọn trên tập TRAIN sao cho ~1/3 mẫu là "đứng" (0)
+
+# ---- Liquidity stress -----------------------------------------------
+stress:
+  notional_usdt:            # Quy mô lệnh giả định để đo price impact (đi hết sổ lệnh 20 tầng)
+    BTCUSDT: 25000          # chọn sao cho chi phí thay đổi đủ nhiều nhưng 20 tầng vẫn thường đủ khớp
+    ETHUSDT: 10000
+  quantile: 0.95            # Stress khi chi phí tác động > phân vị 95% ...
+  lookback_s: 3600          # ... của 1 giờ gần nhất (chỉ dùng quá khứ tính đến t)
+  min_lookback_s: 1800
+  # Ngưỡng cảnh báo (chọn trên các fold walk-forward, KHÔNG dùng test). Đặc tả gốc 0.70 không dùng được:
+  # tỉ lệ nền stress ~5%, xác suất đã hiệu chỉnh gần như không bao giờ > 0.7 (0% số giây).
+  # P > 0.30 ≈ 4.5–6 lần tỉ lệ nền trên walk-forward -> "đỏ"; 0.15–0.30 -> "vàng"; < 0.15 -> "xanh".
+  warning_threshold: 0.30
+  caution_threshold: 0.15
+  # Nhãn đa chiều (robustness): độ sâu < Q20 VÀ biến động > Q80 trên (t, t+h] (Q10/Q90 cho tỉ lệ ~0.5%, quá hiếm)
+  multi_depth_q: 0.20
+  multi_vol_q: 0.80
+
+# ---- Avellaneda–Stoikov (2008) ---------------------------------------
+avellaneda_stoikov:
+  gamma: 0.1                # Hệ số né tránh rủi ro (giá tính theo bps), như ví dụ số của bài báo
+  ratio_warning: 1.5        # StressRatio > 1.5 -> cảnh báo sớm
+
+# ---- Cont–Stoikov–Talreja (2010) -------------------------------------
+cst:
+  max_queue_units: 150      # Cắt lưới trạng thái (a, b) của 2 hàng đợi tốt nhất
+
+# ---- Đặc trưng ----------------------------------------------------------
+features:
+  norm_window_s: 600        # Cửa sổ chuẩn hóa trượt (10 phút; streamer giữ 15 phút -> dùng được live)
+  ofi_windows_s: [1, 10, 30]
+  ret_windows_s: [1, 10, 60]
+  rv_windows_s: [60, 300]
+  ti_windows_s: [10, 60]
+
+# ---- Walk-forward -----------------------------------------------------
+split:
+  test_days: 2              # 2 ngày CUỐI = untouched test, không đụng tới khi chọn mô hình
+  n_folds: 5                # 5 cửa sổ walk-forward trên phần còn lại (mở rộng dần, theo ngày)
+  train_stride: 5           # Lấy 1/5 số giây để train (giây liền kề gần như trùng thông tin); đánh giá trên MỌI giây
+
+# ---- Dự báo spread (BỔ SUNG 21/10/2026 – "Spread Forecast" trong Roadmap của thầy) ----
+# Không ảnh hưởng mô hình hướng giá/stress đã báo cáo. Xem spread_forecast.py.
+spread_forecast:
+  tick_size:                # Bước giá Binance spot (USDT)
+    BTCUSDT: 0.01
+    ETHUSDT: 0.01
+
+# ---- Lợi suất & PnL ---------------------------------------------------
+pnl:
+  fees: [0.0, 0.0002, 0.00075, 0.001]   # Phí mỗi chiều: 0 / 2bps / 7.5bps (BNB) / 10bps (taker thường)
+
+random_state: 42

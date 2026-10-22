@@ -1,0 +1,3 @@
+symbol,cst_unit_qty,cst_lambda_per_s,cst_mu_per_s,cst_theta_per_s,test_next_move_acc_CST,test_next_move_acc_sign_OBI1,test_next_move_logloss_CST,as_k_per_bps,as_A_per_s,as_gamma,as_horizon_s,as_ratio_norm,test_median_delta_star_bps,test_pct_stress_ratio_gt_1.5,test_P(stress|ratio>1.5),test_P(stress|ratio<=1.5)
+BTCUSDT,0.03788,3.30039,2.89735,0.055,0.68644,0.68613,0.61489,2.15836,0.16944,0.1,10,0.04054,1.04794,23.94384,0.11356,0.03257
+ETHUSDT,19.8796,0.07658,0.1186,0.06666,0.63255,0.65941,0.6512,1.24122,0.24089,0.1,10,0.06105,1.82077,22.54553,0.09961,0.03906

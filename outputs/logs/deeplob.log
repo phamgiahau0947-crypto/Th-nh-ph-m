@@ -1,0 +1,22 @@
+﻿19:42:28 INFO [DeepLOB] BTCUSDT: δ=0.0000bps | train 97,137 cửa sổ, val 5,397, test 172,678
+.\.venv\Scripts\python.exe : D:\Gói phần mềm 1\Đề án 5\.venv\Lib\site-packages\torch\nn\modules\conv.py:560: 
+UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the 
+input be created (Triggered internally at 
+C:\actions-runner\_work\pytorch\pytorch\aten\src\ATen\native\Convolution.cpp:1105.)
+At line:1 char:490
++ ... alysis.log; .\.venv\Scripts\python.exe -m src.task2_models.deeplob -- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Gói phần mềm...tion.cpp:1105.):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  return F.conv2d(
+19:46:04 INFO [DeepLOB] BTCUSDT epoch 1: train loss 0.8918 | val loss 0.5696 | 202s
+19:49:34 INFO [DeepLOB] BTCUSDT epoch 2: train loss 0.8675 | val loss 0.5691 | 412s
+19:53:05 INFO [DeepLOB] BTCUSDT epoch 3: train loss 0.8623 | val loss 0.5553 | 623s
+19:55:38 INFO [DeepLOB] BTCUSDT epoch 4: train loss 0.8584 | val loss 0.5594 | 776s
+19:58:06 INFO [DeepLOB] BTCUSDT epoch 5: train loss 0.8555 | val loss 0.5761 | 924s
+19:59:17 INFO [DeepLOB] ETHUSDT: δ=0.3347bps | train 97,137 cửa sổ, val 5,368, test 172,679
+20:01:42 INFO [DeepLOB] ETHUSDT epoch 1: train loss 0.9710 | val loss 0.8096 | 145s
+20:03:46 INFO [DeepLOB] ETHUSDT epoch 2: train loss 0.9508 | val loss 0.9165 | 269s
+20:05:53 INFO [DeepLOB] ETHUSDT epoch 3: train loss 0.9461 | val loss 0.8374 | 396s
+20:07:04 INFO Xong DeepLOB.

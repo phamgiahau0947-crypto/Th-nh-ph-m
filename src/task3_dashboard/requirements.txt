@@ -1,0 +1,7 @@
+streamlit>=1.40
+plotly>=5.20
+pandas>=2.2
+numpy>=1.26
+pyyaml>=6
+# Chế độ Live / Replay dùng thêm thư viện của Task 1 & Task 2 (đã có trong .venv):
+#   websocket-client, scikit-learn, xgboost, pyarrow

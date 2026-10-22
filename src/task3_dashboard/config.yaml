@@ -1,0 +1,31 @@
+# =====================================================================
+# CẤU HÌNH TASK 3 – STREAMLIT DASHBOARD "LIQUIDITY STRESS METER"
+# =====================================================================
+
+symbols: [BTCUSDT, ETHUSDT]
+default_source: mock            # mock | live | replay  (mock chạy được kể cả khi chưa có Task 1/Task 2)
+
+refresh_s: 0.5                  # Chu kỳ vẽ lại giao diện (đặc tả: 100–500 ms)
+refresh_options_s: [0.25, 0.5, 1.0, 2.0]
+window_min: 10                  # Độ dài lịch sử trên các biểu đồ (phút, tối đa 15 = buffer Task 1)
+window_options_min: [5, 10, 15]
+heatmap_max_cols: 300           # Gộp cột heatmap khi cửa sổ dài (giữ giao diện mượt)
+
+# Quy mô lệnh giả định cho "Live Slippage Alert" – trùng Task 2 (stress.notional_usdt)
+notional_usdt:
+  BTCUSDT: 25000
+  ETHUSDT: 10000
+
+# Ngưỡng màu (trùng models/model_meta.json; nếu có file meta thì đọc từ đó)
+stress_warning_threshold: 0.30
+stress_caution_threshold: 0.15
+stress_base_rate: 0.05          # Nhãn stress = vượt Q95 của 1h trước -> tỉ lệ nền ≈ 5%
+horizon_s: 10
+
+# Replay: tốc độ phát lại (x lần thời gian thực)
+replay_speeds: [1, 5, 20, 60]
+
+# Mock: giá khởi điểm giả lập
+mock_start_price:
+  BTCUSDT: 110000.0
+  ETHUSDT: 3900.0

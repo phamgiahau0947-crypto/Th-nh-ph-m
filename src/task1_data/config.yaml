@@ -1,0 +1,49 @@
+# =====================================================================
+# CẤU HÌNH TASK 1 – DATA STREAMER PIPELINE
+# Mọi thời gian đều theo UTC. "Chốt ngày" = 00:00 UTC (= 07:00 giờ Việt Nam).
+# =====================================================================
+
+symbol: BTCUSDT          # Cặp mặc định (streamer real-time / dashboard)
+symbols:                 # Các cặp đưa vào kho nền (Đề bài mục 3.1: ưu tiên BTC/USDT, ETH/USDT)
+  - BTCUSDT
+  - ETHUSDT
+levels: 20               # Số tầng giá bid/ask lưu lại
+
+# ---- Kho nền -------------------------------------------------------
+store:
+  sample_interval_ms: 1000   # Mỗi bao nhiêu ms lưu 1 dòng (1000 = 1 giây/dòng)
+  max_book_staleness_ms: 5000  # Nếu sổ lệnh không cập nhật quá 5s (mất mạng/tắt máy) -> bỏ trống, không bịa dữ liệu
+  retention_days: 30         # Kho trượt: chỉ giữ N ngày gần nhất (chọn 14 hoặc 30). Bộ nền cố định (seed) KHÔNG bị xóa.
+  keep_raw_trades: false     # true = giữ thêm file trade gốc từng lệnh (nặng ~30-60MB/ngày)
+
+# ---- Bộ nền cố định (seed) từ Tardis: ngày mùng 1 mỗi tháng, miễn phí ----
+seed:
+  months_back: 12            # Lấy ngày mùng 1 của 12 tháng gần nhất
+  tardis_exchange: binance   # binance = Binance spot
+  tardis_data_type: book_snapshot_25
+
+# ---- File CSV để mở xem bằng mắt ------------------------------------
+csv_view:
+  interval_s: 10             # 10 giây/dòng
+  levels: 5                  # Chỉ ghi 5 tầng đầu cho gọn
+
+# ---- Nguồn dữ liệu ----------------------------------------------------
+sources:
+  binance_vision: https://data.binance.vision
+  tardis_datasets: https://datasets.tardis.dev
+  rest_bases:                # Thử lần lượt nếu cái đầu bị lỗi/chặn
+    - https://api.binance.com
+    - https://data-api.binance.vision
+  ws_bases:
+    - wss://stream.binance.com:9443
+    - wss://data-stream.binance.vision:9443
+
+# ---- Streamer real-time ----------------------------------------------
+streamer:
+  buffer_minutes: 15         # Giữ 15 phút gần nhất trong RAM cho Dashboard
+  depth_speed: 100ms         # depth20@100ms
+  flush_every_s: 60          # Khi bật ghi (record), cứ 60s ghi 1 lần ra ổ đĩa
+
+# ---- REST snapshot collector -----------------------------------------
+collector:
+  poll_interval_ms: 200      # Theo đặc tả: 200ms/lần (weight 5/lần, ~1500/6000 weight mỗi phút)

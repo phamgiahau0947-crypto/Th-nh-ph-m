@@ -1,0 +1,15 @@
+symbol,task,model,train_s,type,n_params,latency_ms_p50,latency_ms_p95,n_trees,n_nodes
+BTCUSDT,direction,LogReg-OvR,4.272,linear,204.0,0.678,1.1162,,
+BTCUSDT,direction,MNLogit,4.396,linear,204.0,0.4004,0.7375,,
+BTCUSDT,direction,RandomForest,12.0714,trees,,42.3315,53.2664,200.0,101118.0
+BTCUSDT,direction,XGBoost,28.7888,trees,,0.717,0.8533,1200.0,95472.0
+BTCUSDT,stress,LogReg,2.2901,linear,68.0,1.1787,1.7786,,
+BTCUSDT,stress,RandomForest,11.5544,trees,,32.787,46.5274,200.0,57232.0
+BTCUSDT,stress,XGBoost,7.6883,trees,,1.9718,3.1107,400.0,32952.0
+ETHUSDT,direction,LogReg-OvR,4.9119,linear,204.0,0.6133,1.0389,,
+ETHUSDT,direction,MNLogit,2.6049,linear,204.0,0.366,0.6716,,
+ETHUSDT,direction,RandomForest,11.03,trees,,31.8178,42.8037,200.0,100266.0
+ETHUSDT,direction,XGBoost,31.9895,trees,,0.7143,0.8307,1200.0,98622.0
+ETHUSDT,stress,LogReg,1.9911,linear,68.0,2.5765,4.7227,,
+ETHUSDT,stress,RandomForest,10.6203,trees,,32.329,46.2487,200.0,56898.0
+ETHUSDT,stress,XGBoost,6.9648,trees,,1.9711,2.2596,400.0,31632.0

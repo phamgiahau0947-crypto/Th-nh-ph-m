@@ -1,0 +1,26 @@
+# Thư viện cho toàn bộ dự án – đã thử trên Windows 11 + Python 3.13.
+# Phiên bản được GHIM đúng như lúc train: các mô hình trong models/*.pkl được lưu bằng pickle,
+# cài scikit-learn / xgboost khác phiên bản có thể không mở được mô hình.
+#
+# Cài:  .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+# PyTorch (chỉ cần cho DeepLOB, không bắt buộc) cài riêng bản CPU:
+#       .\.venv\Scripts\python.exe -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+
+# Dữ liệu (thu thập, lưu trữ)
+pandas==3.0.6
+numpy==2.5.4
+pyarrow==26.0.0
+requests==2.34.2
+websocket-client==1.9.2
+PyYAML==6.0.3
+
+# Toán & mô hình
+scipy==1.18.1
+scikit-learn==1.9.1
+xgboost==3.4.1
+statsmodels==0.15.0
+matplotlib==3.11.2
+
+# Dashboard
+streamlit==1.66.0
+plotly==7.1.0

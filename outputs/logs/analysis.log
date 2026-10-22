@@ -1,0 +1,17 @@
+﻿19:39:28 INFO [returns] BTCUSDT xong
+.\.venv\Scripts\python.exe : D:\Gói phần mềm 1\Đề án 5\.venv\Lib\site-packages\numpy\lib\_histograms_impl.py:897: 
+RuntimeWarning: invalid value encountered in divide
+At line:1 char:302
++ ... tch {} } }; .\.venv\Scripts\python.exe -c "from src.task2_models impo ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Gói phần mềm...tered in divide:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  return n / db / n.sum(), bin_edges
+19:39:30 INFO [returns] ETHUSDT xong
+19:39:30 INFO Xong return_analysis.
+19:39:34 INFO [eda] BTCUSDT xong
+19:39:39 INFO [eda] ETHUSDT xong
+19:40:29 INFO [MLOFI] BTCUSDT: λ Ridge theo M (CV trên dev) = {1: 568.987, 2: 568.987, 3: 568.987, 4: 568.987, 5: 568.987, 6: 568.987, 7: 355.648, 8: 355.648, 9: 355.648, 10: 355.648}
+19:41:49 INFO [MLOFI] ETHUSDT: λ Ridge theo M (CV trên dev) = {1: 910.298, 2: 568.987, 3: 568.987, 4: 568.987, 5: 910.298, 6: 910.298, 7: 910.298, 8: 910.298, 9: 910.298, 10: 910.298}
+19:42:22 INFO Xong mlofi_regression.

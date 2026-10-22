@@ -1,0 +1,27 @@
+﻿16:23:56 INFO ===== BTCUSDT: 12 ngày | dev 2025-11-01..2026-08-01 | test [datetime.date(2026, 9, 1), datetime.date(2026, 10, 1)] =====
+16:24:47 INFO [BTCUSDT] fold1: train 431,993 dòng (5 ngày) | eval 86,399 | 51s
+16:29:38 INFO [BTCUSDT] fold2: train 518,392 dòng (6 ngày) | eval 86,398 | 291s
+16:33:54 INFO [BTCUSDT] fold3: train 604,790 dòng (7 ngày) | eval 86,398 | 256s
+19:17:50 INFO [BTCUSDT] fold4: train 691,188 dòng (8 ngày) | eval 86,396 | 9836s
+19:19:29 INFO [BTCUSDT] fold5: train 777,584 dòng (9 ngày) | eval 86,399 | 99s
+19:22:14 INFO [BTCUSDT] test: train 863,983 dòng (10 ngày) | eval 172,796 | 164s
+19:22:16 INFO ===== ETHUSDT: 12 ngày | dev 2025-11-01..2026-08-01 | test [datetime.date(2026, 9, 1), datetime.date(2026, 10, 1)] =====
+19:23:09 INFO [ETHUSDT] fold1: train 431,993 dòng (5 ngày) | eval 86,397 | 53s
+19:27:36 INFO [ETHUSDT] fold2: train 518,390 dòng (6 ngày) | eval 86,398 | 267s
+19:30:25 INFO [ETHUSDT] fold3: train 604,788 dòng (7 ngày) | eval 86,398 | 169s
+19:31:48 INFO [ETHUSDT] fold4: train 691,186 dòng (8 ngày) | eval 86,397 | 82s
+19:33:17 INFO [ETHUSDT] fold5: train 777,583 dòng (9 ngày) | eval 86,386 | 89s
+19:35:21 INFO [ETHUSDT] test: train 863,969 dòng (10 ngày) | eval 172,797 | 124s
+19:35:22 INFO Mô hình được chọn theo walk-forward: {'BTCUSDT': {'direction': 'RandomForest', 'stress': 'LogReg'}, 'ETHUSDT': {'direction': 'XGBoost', 'stress': 'RandomForest'}}
+19:35:22 INFO Đã lưu D:\Gói phần mềm 1\Đề án 5\models\model_direction.pkl
+19:35:22 INFO Đã lưu D:\Gói phần mềm 1\Đề án 5\models\model_stress.pkl
+.\.venv\Scripts\python.exe : D:\Gói phần mềm 1\Đề án 5\src\task2_models\evaluate_walkforward.py:191: Pandas4Warning: 
+Timestamp.utcnow is deprecated and will be removed in a future version. Use Timestamp.now('UTC') instead.
+At line:1 char:363
++ ... | Out-Null; .\.venv\Scripts\python.exe -m src.task2_models.evaluate_w ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\Gói phần mềm...'UTC') instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  "created_utc": pd.Timestamp.utcnow().isoformat()})
+19:39:04 INFO Xong evaluate_walkforward.

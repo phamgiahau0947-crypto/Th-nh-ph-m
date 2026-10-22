@@ -1,0 +1,3 @@
+symbol,model,split,n_params,train_s,epochs_run,latency_ms_p50,n,accuracy,macro_f1,balanced_acc,mcc,precision_macro,recall_macro,brier,log_loss,f1_down,f1_flat,f1_up
+BTCUSDT,DeepLOB,test,143267,923.891,5,1.719,172678,0.5358,0.5355,0.5408,0.3102,0.5414,0.5408,0.5771,0.957,0.5239,0.5445,0.5381
+ETHUSDT,DeepLOB,test,143267,396.0286,3,1.6184,172679,0.4806,0.4787,0.4838,0.2264,0.4852,0.4838,0.6222,1.0274,0.4483,0.5121,0.4758
